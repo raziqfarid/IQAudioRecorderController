@@ -315,7 +315,7 @@ typedef NS_ENUM(NSUInteger, IQCropGestureState) {
         _cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelAction:)];
         self.navigationItem.leftBarButtonItem = _cancelButton;
         _doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneAction:)];
-        _doneButton.enabled = NO;
+        _doneButton.enabled = YES;
         self.navigationItem.rightBarButtonItem = _doneButton;
     }
     
@@ -669,7 +669,7 @@ typedef NS_ENUM(NSUInteger, IQCropGestureState) {
 
         if ([self.originalAudioFilePath isEqualToString:self.currentAudioFilePath])
         {
-            _doneButton.enabled = NO;
+            _doneButton.enabled = YES;
         }
         else
         {
